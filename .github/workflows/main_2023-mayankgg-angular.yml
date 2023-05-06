@@ -23,7 +23,7 @@ jobs:
 
       - name: npm install, build, and test
         run: |
-          cd .\2023-WebApp
+          cd 2023-WebApp
           npm install
 
       - name: Lint
