@@ -32,7 +32,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: node-app
-          path: .
+          path: dist/2023-web-app/
 
   deploy:
     runs-on: ubuntu-latest
