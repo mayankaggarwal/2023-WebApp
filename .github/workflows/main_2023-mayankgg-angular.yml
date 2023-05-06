@@ -21,9 +21,21 @@ jobs:
         with:
           node-version: '18.x'
 
-      - name: npm install, build, and test
+      - name: npm install
         run: |
           npm install
+
+      - name: Replace secret
+        uses: cschleiden/replace-tokens@v1
+        with:
+          tokenPrefix: '{'
+          tokenSuffix: '}'
+          files: 'src/environments/environment.prod.ts'
+        env:
+          SECRET_API_KEY: ${{ secrets.API_KEY}}
+          SECRET_API_URL: ${{ secrets.API_URL}}
+          SECRET_CLIENT_ID: ${{ secrets.CLIENT_ID}}
+          SECRET_AUDIENCE: ${{ secrets.AUDIENCE}}
 
       - name: Build
         run: npm run build
