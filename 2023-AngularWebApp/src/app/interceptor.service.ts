@@ -12,10 +12,12 @@ export class InterceptorService implements HttpInterceptor {
   constructor(private auth: AuthService) { }
 
   intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
+    console.log('Running inside interceptor');
     return this.auth.getTokenSilently$().pipe(
       mergeMap((token: GetTokenSilentlyVerboseResponse) =>{
+        console.log("Inside call silently");
         const tokenReq = req.clone({
-          setHeaders: { Authorization: `Bearer ${token.access_token}`}
+          setHeaders: { Authorization: `Bearer ${token}`}
         });
         return next.handle(tokenReq);
       }),

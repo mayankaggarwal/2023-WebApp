@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "Gh1+6cWNd77AFuopkATJRhjK7xfJ5uuWUOb89mw/tqs=",
+  "Source": "Auth0NetCoreDemo",
+  "BasePath": "_content/Auth0NetCoreDemo",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
