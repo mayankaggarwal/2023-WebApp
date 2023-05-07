@@ -32,4 +32,10 @@ public IEnumerable<WeatherForecast> Get()
     })
     .ToArray();
 }
+
+[HttpGet("default")]
+public string GetDefault()
+{
+    return "Hello World";
+}
 }

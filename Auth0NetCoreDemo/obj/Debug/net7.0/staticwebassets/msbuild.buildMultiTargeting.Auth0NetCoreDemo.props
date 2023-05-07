@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="..\build\Auth0NetCoreDemo.props" />
-</Project>
