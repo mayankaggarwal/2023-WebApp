@@ -21,11 +21,11 @@ name: Build and deploy ASP.Net Core app to an Azure Web App
 
 defaults:
   run:
-    working-directory: ./2023-AngularWebApp
+    working-directory: ./Auth0NetCoreDemo
 
 env:
   AZURE_WEBAPP_NAME: 2023-mayankgg-webapi    # set this to the name of your Azure Web App
-  AZURE_WEBAPP_PACKAGE_PATH: './2023-AngularWebApp'      # set this to the path to your web app project, defaults to the repository root
+  AZURE_WEBAPP_PACKAGE_PATH: './Auth0NetCoreDemo'      # set this to the path to your web app project, defaults to the repository root
   DOTNET_VERSION: '7.0'                 # set this to the .NET Core version to use
 
 on:
