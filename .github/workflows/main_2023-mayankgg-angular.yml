@@ -33,13 +33,12 @@ jobs:
         with:
           tokenPrefix: '{'
           tokenSuffix: '}'
-          files: 'src/environments/environment.prod.ts'
+          files: '2023-AngularWebApp/src/environments/environment.prod.ts'
         env:
           SECRET_API_KEY: ${{ secrets.API_KEY}}
           SECRET_API_URL: ${{ secrets.API_URL}}
           SECRET_CLIENT_ID: ${{ secrets.CLIENT_ID}}
           SECRET_AUDIENCE: ${{ secrets.AUDIENCE}}
-        working-directory: 2023-AngularWebApp
 
       - name: Build
         run: npm run build:production
